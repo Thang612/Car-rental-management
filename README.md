@@ -1,1 +1,2 @@
 # Car-rental-management
+The Vehicle Rental Management System is a comprehensive software solution designed to streamline and automate the process of managing vehicle rentals for rental agencies or businesses. This system provides a centralized platform for managing all aspects of the vehicle rental process, including booking reservations, managing vehicle inventory, generating rental contracts, handling billing and invoicing, and tracking vehicle maintenance.
