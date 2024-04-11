@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="823176668b0d47a9a05ea4e00329cfe1" Name="Diagram1">
+        <EntityTypeShape EntityType="QLTXModel.ChiTietHopDong" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.HoaDon" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.HopDong" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.KhachHang" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.LoaiXe" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.NguoiDung" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.SoXeRa" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.SoXeVao" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.SuaChua" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTXModel.Xe" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="QLTXModel.FK__ChiTietHo__MaHop__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__ChiTietHop__MaXe__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__HoaDon__MaHopDon__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__HopDong__MaKhach__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__HopDong__MaNguoi__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__Xe__MaLoaiXe__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__SoXeRa__MaXe__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__SoXeVao__MaXe__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTXModel.FK__SuaChua__MaXe__4CA06362" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
