@@ -16,7 +16,7 @@ namespace GUI_QLTX
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TimXe());
+            Application.Run(new Login());
         }
     }
 }

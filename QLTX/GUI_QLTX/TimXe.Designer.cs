@@ -49,10 +49,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.fpDanhSachXe = new System.Windows.Forms.FlowLayoutPanel();
             this.btThemXe = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +71,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 43);
@@ -263,16 +267,18 @@
             // fpDanhSachXe
             // 
             this.fpDanhSachXe.AutoScroll = true;
-            this.fpDanhSachXe.Location = new System.Drawing.Point(12, 221);
+            this.fpDanhSachXe.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.fpDanhSachXe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fpDanhSachXe.Location = new System.Drawing.Point(0, 202);
             this.fpDanhSachXe.Name = "fpDanhSachXe";
-            this.fpDanhSachXe.Size = new System.Drawing.Size(983, 390);
+            this.fpDanhSachXe.Size = new System.Drawing.Size(1040, 415);
             this.fpDanhSachXe.TabIndex = 3;
             // 
             // btThemXe
             // 
             this.btThemXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemXe.ForeColor = System.Drawing.Color.Black;
-            this.btThemXe.Location = new System.Drawing.Point(908, 617);
+            this.btThemXe.Location = new System.Drawing.Point(888, 6);
             this.btThemXe.Name = "btThemXe";
             this.btThemXe.Size = new System.Drawing.Size(114, 37);
             this.btThemXe.TabIndex = 4;
@@ -280,21 +286,39 @@
             this.btThemXe.UseVisualStyleBackColor = true;
             this.btThemXe.Click += new System.EventHandler(this.btThemXe_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 162);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(607, 100);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btThemXe);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 617);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1040, 43);
+            this.panel5.TabIndex = 5;
+            // 
             // TimXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1040, 666);
-            this.Controls.Add(this.btThemXe);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.fpDanhSachXe);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TimXe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TimXe";
             this.Load += new System.EventHandler(this.TimXe_Load);
             this.panel1.ResumeLayout(false);
@@ -303,6 +327,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -330,5 +355,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel fpDanhSachXe;
         private System.Windows.Forms.Button btThemXe;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel5;
     }
 }
