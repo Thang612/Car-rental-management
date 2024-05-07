@@ -63,9 +63,9 @@ namespace GUI_QLTX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap protection {
+        internal static System.Drawing.Bitmap upload {
             get {
-                object obj = ResourceManager.GetObject("protection", resourceCulture);
+                object obj = ResourceManager.GetObject("upload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

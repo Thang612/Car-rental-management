@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BUS_LoaiXe.cs" />
     <Compile Include="BUS_NguoiDung.cs" />
+    <Compile Include="BUS_ThuongHieu.cs" />
     <Compile Include="BUS_Xe.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

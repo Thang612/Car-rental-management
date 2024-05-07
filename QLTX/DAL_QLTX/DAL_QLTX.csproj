@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DAL_LoaiXe.cs" />
     <Compile Include="DAL_NguoiDung.cs" />
+    <Compile Include="DAL_ThuongHieu.cs" />
     <Compile Include="DAL_Xe.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Form1.cs">

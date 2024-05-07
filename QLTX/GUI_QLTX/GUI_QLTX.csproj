@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76837327-21CC-4BF7-BD70-E993D69558D8}</ProjectGuid>
+    <ProjectGuid>{474150F6-DF15-41D9-9A43-20AA4E8F4E50}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GUI_QLTX</RootNamespace>
     <AssemblyName>GUI_QLTX</AssemblyName>
@@ -46,45 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Control.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Control.Designer.cs">
+      <DependentUpon>Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_DSXe.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_DSXe.Designer.cs">
-      <DependentUpon>GUI_DSXe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TimXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimXe.Designer.cs">
+      <DependentUpon>TimXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xe.Designer.cs">
+      <DependentUpon>Xe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XeUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XeUI.Designer.cs">
+      <DependentUpon>XeUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_DSXe.resx">
-      <DependentUpon>GUI_DSXe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="TimXe.resx">
+      <DependentUpon>TimXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xe.resx">
+      <DependentUpon>Xe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XeUI.resx">
+      <DependentUpon>XeUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,7 +126,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\protection.png" />
+    <None Include="assert\icon\square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assert\background\bk_Login.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assert\icon\upload.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
