@@ -41,16 +41,16 @@
             this.lbMayLanh = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.picXe = new System.Windows.Forms.PictureBox();
             this.btThueXe = new System.Windows.Forms.Button();
             this.btCapNhat = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbLoaiXe = new System.Windows.Forms.Label();
             this.lbThuongHieu = new System.Windows.Forms.Label();
+            this.picXe = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picXe)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picXe)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTenXe
@@ -185,15 +185,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tính năng";
             // 
-            // picXe
-            // 
-            this.picXe.Location = new System.Drawing.Point(19, 19);
-            this.picXe.Name = "picXe";
-            this.picXe.Size = new System.Drawing.Size(135, 116);
-            this.picXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picXe.TabIndex = 0;
-            this.picXe.TabStop = false;
-            // 
             // btThueXe
             // 
             this.btThueXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -204,6 +195,7 @@
             this.btThueXe.TabIndex = 3;
             this.btThueXe.Text = "Thuê xe";
             this.btThueXe.UseVisualStyleBackColor = false;
+            this.btThueXe.Click += new System.EventHandler(this.btThueXe_Click);
             // 
             // btCapNhat
             // 
@@ -246,6 +238,15 @@
             this.lbThuongHieu.TabIndex = 1;
             this.lbThuongHieu.Text = "Thương Hiệu ";
             // 
+            // picXe
+            // 
+            this.picXe.Location = new System.Drawing.Point(19, 19);
+            this.picXe.Name = "picXe";
+            this.picXe.Size = new System.Drawing.Size(135, 116);
+            this.picXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picXe.TabIndex = 0;
+            this.picXe.TabStop = false;
+            // 
             // XeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -259,13 +260,14 @@
             this.Controls.Add(this.panel1);
             this.Name = "XeUI";
             this.Size = new System.Drawing.Size(887, 149);
+            this.Load += new System.EventHandler(this.XeUI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picXe)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picXe)).EndInit();
             this.ResumeLayout(false);
 
         }

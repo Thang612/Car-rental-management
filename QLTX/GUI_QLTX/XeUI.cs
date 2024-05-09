@@ -23,6 +23,11 @@ namespace GUI_QLTX
         {
             this._timXeForm = timXe;
         }
+
+        public XeUI()
+        {
+            InitializeComponent();
+        }
         public XeUI(DataRow xe)
         {
             InitializeComponent();
@@ -47,6 +52,27 @@ namespace GUI_QLTX
             }
         }
 
+        public void hienThi(int xeID)
+        {
+            DTO_QLTX.Xe xe = busXe.LayXeTheoID(xeID);
+            lbTenXe.Text = "Tên xe: " + xe.MoTa;
+            lbGia.Text = "Giá thuê: " + xe.GiaThue + "đ/ngày";
+            lbBienSo.Text = "Biển số: " + xe.BienSo;
+            lbMayLanh.Text = ((bool)xe.MayLanh) ? "Có" : "Không"; // Chuyển đổi kiểu dữ liệu
+            lbCamBien.Text = ((bool)xe.CamBienLui) ? "Có" : "Không"; // Chuyển đổi kiểu dữ liệu
+            lbAC.Text = ((bool)xe.AC) ? "Có" : "Không"; // Chuyển đổi kiểu dữ liệu
+            lbThuongHieu.Text = xe.ThuongHieu.TenThuongHieu;
+            lbLoaiXe.Text = xe.LoaiXe.TenLoaiXe;
+            // Chuyển đổi dữ liệu byte[] thành một đối tượng hình ảnh
+            using (MemoryStream ms = new MemoryStream(xe.HinhAnh as byte[]))
+            {
+                picXe.Image = Image.FromStream(ms);
+            }
+            this.Controls.Remove(btThueXe);
+            this.Controls.Remove(btXoa);
+            this.Controls.Remove(btCapNhat);
+        }
+
         private void btCapNhat_Click(object sender, EventArgs e)
         {
             Xe xeForm = new Xe();
@@ -61,6 +87,21 @@ namespace GUI_QLTX
         {
             busXe.xoaXe(xeID);
             _timXeForm.hienThiXe();
+        }
+
+        private void btThueXe_Click(object sender, EventArgs e)
+        {
+            Control.thueXe(xeID);
+            Control.hienThiThueXe();
+            Control.tinhTien();
+
+
+
+        }
+
+        private void XeUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

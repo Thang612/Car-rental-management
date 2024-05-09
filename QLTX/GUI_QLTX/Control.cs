@@ -12,6 +12,22 @@ namespace GUI_QLTX
 {
     public partial class Control : Form
     {
+        static ThueXe thuexeForm = new ThueXe();
+        public static void thueXe(int xeID)
+        {
+            thuexeForm.themXeThue(xeID);
+        }
+        public static void tinhTien()
+        {
+            thuexeForm.tinhTien();
+        }
+
+        public static void hienThiThueXe()
+        {
+            thuexeForm.Show();
+            thuexeForm.StartPosition = FormStartPosition.CenterParent;
+        }
+
         public Control()
         {
             InitializeComponent();

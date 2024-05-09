@@ -81,7 +81,7 @@ namespace GUI_QLTX
             xeForm.Owner = this;
             xeForm.setTimXeForm(this);
             xeForm.StartPosition = FormStartPosition.CenterParent;
-            xeForm.Show();
+            xeForm.Show(); 
         }
 
         private void cbLoaiXe_SelectedIndexChanged(object sender, EventArgs e)
