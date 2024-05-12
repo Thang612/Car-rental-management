@@ -1,5 +1,6 @@
 ﻿using DTO_QLTX;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,18 +9,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DAL_QLTX
 {
     public class DAL_Xe:DBConnect
     {
-        public DataTable layXe()
+        public DataTable layXe(DateTime ngayLay, DateTime ngayTra)
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Xe JOIN LoaiXe ON XE.MaLoaiXe = LoaiXe.MaLoaiXe JOIN ThuongHieu ON Xe.MaThuongHieu = ThuongHieu.MaThuongHieu", _conn);
-            DataTable dtXe = new DataTable();
-            da.Fill(dtXe);
-            return dtXe;
+            string query = @"SELECT * FROM Xe 
+                     JOIN LoaiXe ON XE.MaLoaiXe = LoaiXe.MaLoaiXe 
+                     JOIN ThuongHieu ON Xe.MaThuongHieu = ThuongHieu.MaThuongHieu
+                     WHERE MaXe NOT IN 
+                     (SELECT MaXe FROM ChiTietHopDong 
+                      JOIN HopDong ON ChiTietHopDong.MaHopDong = HopDong.MaHopDong
+                      WHERE ((NgayKhoiHanh BETWEEN @NgayLay AND @NgayTra) OR (NgayKetThuc BETWEEN @NgayLay AND @NgayTra))
+                      AND HopDong.ThanhToan = 0)";
+
+            using (SqlDataAdapter da = new SqlDataAdapter(query, _conn))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@NgayLay", ngayLay);
+                da.SelectCommand.Parameters.AddWithValue("@NgayTra", ngayTra);
+
+                DataTable dtXe = new DataTable();
+                da.Fill(dtXe);
+                return dtXe;
+            }
         }
+
+        public DataTable layXe(DateTime ngayLay, DateTime ngayTra, string loaiXe, string thuongHieu)
+        {
+            string query = string.Format(@"SELECT * FROM Xe 
+                 JOIN LoaiXe ON XE.MaLoaiXe = LoaiXe.MaLoaiXe 
+                 JOIN ThuongHieu ON Xe.MaThuongHieu = ThuongHieu.MaThuongHieu
+                 WHERE (TenThuongHieu like N'%{0}%' ) 
+                 AND (TenLoaiXe like N'%{1}%' ) 
+                 AND MaXe NOT IN 
+                 (SELECT MaXe FROM ChiTietHopDong 
+                  JOIN HopDong ON ChiTietHopDong.MaHopDong = HopDong.MaHopDong
+                  WHERE ((NgayKhoiHanh BETWEEN @NgayLay AND @NgayTra) OR (NgayKetThuc BETWEEN @NgayLay AND @NgayTra))
+                  AND HopDong.ThanhToan = 0)", thuongHieu, loaiXe);
+
+            using (SqlDataAdapter da = new SqlDataAdapter(query, _conn))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@NgayLay", ngayLay);
+                da.SelectCommand.Parameters.AddWithValue("@NgayTra", ngayTra);
+                //da.SelectCommand.Parameters.AddWithValue("@TenThuongHieu", loaiXe);
+                //da.SelectCommand.Parameters.AddWithValue("@TenLoaiXe", thuongHieu);
+
+                DataTable dtXe = new DataTable();
+                da.Fill(dtXe);
+                return dtXe;
+            }
+
+
+        }
+
 
 
         public void themXe(string bienSo, string moTa, string tinhTrang, int giaThue, string tenThuongHieu, string tenLoaiXe, bool mayLanh, bool camBienLui, bool ac, byte[] hinhAnh)

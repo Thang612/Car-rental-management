@@ -1,4 +1,5 @@
 ﻿using BUS_QLTX;
+using DTO_QLTX;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,15 +17,22 @@ namespace GUI_QLTX
 {
     public partial class ThueXe : Form
     {
+        BUS_HopDong busHopDong = new BUS_HopDong();
         BUS_Xe busXe = new BUS_Xe();
-        private HashSet<int> dsIDXe = new HashSet<int>();
-        public void themXeThue (int xeID)
+        BUS_KhachHang busKhachHang = new BUS_KhachHang();
+        private HashSet<ChiTietHopDong> dsXe = new HashSet<ChiTietHopDong>();
+        private int idKhachHang;
+        public void themXeThue (ChiTietHopDong chiTiet)
         {
-            dsIDXe.Add(xeID);
-            fpDSXe.Controls.Clear();
-            foreach (int item in dsIDXe)
+            foreach(ChiTietHopDong item in dsXe)
             {
-                XeUI xeUI = new XeUI();
+                if (item.MaXe == chiTiet.MaXe) return;
+            }
+            dsXe.Add(chiTiet);
+            fpDSXe.Controls.Clear();
+            foreach (ChiTietHopDong item in dsXe)
+            {
+                XeChiTiet xeUI = new XeChiTiet(this);
                 xeUI.hienThi(item);
                 fpDSXe.Controls.Add(xeUI);
             }
@@ -32,15 +40,14 @@ namespace GUI_QLTX
 
         public void tinhTien()
         {
-            TimeSpan difference = dtNgayTra.Value.Subtract(dtNgayLay.Value);
-
-            int day = difference.Days+1;
-
             int total = 0; 
             fpTinhTien.Controls.Clear();
-            foreach (int xeID in dsIDXe)
+            foreach (ChiTietHopDong chiTiet in dsXe)
             {
-                DTO_QLTX.Xe xe = busXe.LayXeTheoID(xeID);
+                TimeSpan difference = chiTiet.NgayKetThuc.Value.Subtract(chiTiet.NgayKhoiHanh.Value);
+
+                int day = difference.Days +1;
+                DTO_QLTX.Xe xe = busXe.LayXeTheoID((int)chiTiet.MaXe);
                 Label lb = new Label();
                 lb.Text = string.Format("{0} : {1} đ * {2}= {3} đ", xe.BienSo, xe.GiaThue, day, day* xe.GiaThue);
                 lb.AutoSize = true;
@@ -58,47 +65,73 @@ namespace GUI_QLTX
         {
             tinhTien();
             fpDSXe.Controls.Clear();
-            foreach (int item in dsIDXe)
+            foreach (ChiTietHopDong item in dsXe)
             {
-                XeUI xeUI = new XeUI();
+                XeChiTiet xeUI = new XeChiTiet(this);
                 xeUI.hienThi(item);
                 fpDSXe.Controls.Add(xeUI);
             }
         }
 
-        private void dtNgayLay_ValueChanged(object sender, EventArgs e)
+        private void btTimKH_Click(object sender, EventArgs e)
         {
-            TimeSpan difference = dtNgayTra.Value.Subtract(dtNgayLay.Value);
-
-            int day = difference.Days;
-            TimeSpan differenceNow = dtNgayLay.Value.Subtract(DateTime.Now);
-
-            int dayNow = differenceNow.Days;
-            if (day < 0 || dayNow < 0)
+            if (txtCCCD.Text == "")
             {
-                MessageBox.Show("Ngày không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Đặt giá trị ngày lấy xe thành ngày trước đó (ví dụ: ngày hiện tại)
-                dtNgayLay.Value = DateTime.Now;
+                MessageBox.Show("Nhập thông tin khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            tinhTien();
-        }
 
-        private void dtNgayTra_ValueChanged(object sender, EventArgs e)
-        {
-            TimeSpan difference = dtNgayTra.Value.Subtract(dtNgayLay.Value);
-            int day = difference.Days;
-
-            if (day < 0)
+            int cccd;
+            if (!int.TryParse(txtCCCD.Text, out cccd)) // Kiểm tra xem liệu nhập vào có phải là một số không
             {
-                MessageBox.Show("Ngày trả xe không thể trước ngày lấy xe!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Đặt giá trị ngày trả xe thành ngày lấy xe
-                dtNgayTra.Value = dtNgayLay.Value;
-                return; // Dừng thực thi phương thức để người dùng có thể chỉnh sửa ngày trả xe
+                MessageBox.Show("Vui lòng nhập số CCCD hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            tinhTien();
+            DTO_QLTX.KhachHang khachHang = busKhachHang.timKhachHang(cccd);
+            if (khachHang == null)
+            {
+                DialogResult result = MessageBox.Show("Khách hàng không tồn tại trong hệ thống. Bạn có muốn đăng ký một khách hàng mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Mở form KhachHang để đăng ký khách hàng mới
+                    KhachHang formKhachHang = new KhachHang();
+                    formKhachHang.Show();
+                }
+                return;
+            }
+
+            // Hiển thị thông tin khách hàng nếu tìm thấy
+            txtTenKH.Text = khachHang.TenKhachHang;
+            txtSoDienThoaiKH.Text = khachHang.SoDienThoai.ToString();
+            idKhachHang = khachHang.MaKhachHang;
         }
 
+        private void btThueXe_Click(object sender, EventArgs e)
+        {
+
+            int total = 0;
+            foreach (ChiTietHopDong chiTiet in dsXe)
+            {
+                TimeSpan difference = chiTiet.NgayKetThuc.Value.Subtract(chiTiet.NgayKhoiHanh.Value);
+
+                int day = difference.Days + 1;
+                
+                DTO_QLTX.Xe xe = busXe.LayXeTheoID((int)chiTiet.MaXe);
+                total += day * (int)xe.GiaThue;
+            }
+            busHopDong.themHopDong(DateTime.Now, total, txtDatCoc.Text == "" ? 0 : Convert.ToInt32(txtDatCoc.Text), txtDIeuKhoan.Text, idKhachHang, dsXe);
+        }
+
+        private void txtDatCoc_TextChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra xem input có phải là một số không
+            if (!int.TryParse(txtDatCoc.Text, out _))
+            {
+                MessageBox.Show("Vui lòng nhập một số!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Nếu không phải số, bạn có thể xử lý tiếp theo ở đây hoặc bỏ qua
+            }
+        }
     }
 }

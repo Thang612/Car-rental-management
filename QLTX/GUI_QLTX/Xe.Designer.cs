@@ -51,7 +51,6 @@
             this.cbCamBien = new System.Windows.Forms.ComboBox();
             this.cbMayLanh = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
@@ -131,7 +130,7 @@
             // 
             this.picXe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picXe.Image = global::GUI_QLTX.Properties.Resources.upload;
-            this.picXe.Location = new System.Drawing.Point(21, 68);
+            this.picXe.Location = new System.Drawing.Point(21, 88);
             this.picXe.Name = "picXe";
             this.picXe.Size = new System.Drawing.Size(187, 188);
             this.picXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -291,17 +290,6 @@
             this.cbMayLanh.Size = new System.Drawing.Size(79, 28);
             this.cbMayLanh.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(65, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 34);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Đổi Ảnh";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnCapNhat
             // 
             this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -333,7 +321,6 @@
             this.ClientSize = new System.Drawing.Size(620, 391);
             this.Controls.Add(this.lbTieuDe);
             this.Controls.Add(this.btnCapNhat);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btThemXe);
             this.Controls.Add(this.picXe);
@@ -378,7 +365,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox cbLoaiXe;
         private System.Windows.Forms.ComboBox cbThuongHieu;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Label lbTieuDe;
     }

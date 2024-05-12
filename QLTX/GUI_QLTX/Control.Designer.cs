@@ -31,11 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbChucVu = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btDonHang = new System.Windows.Forms.Button();
+            this.btKhachHang = new System.Windows.Forms.Button();
             this.btXe = new System.Windows.Forms.Button();
             this.lbNameUser = new System.Windows.Forms.Label();
             this.pnForm = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,8 +45,9 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lbChucVu);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btDonHang);
+            this.panel1.Controls.Add(this.btKhachHang);
             this.panel1.Controls.Add(this.btXe);
             this.panel1.Controls.Add(this.lbNameUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -75,35 +77,36 @@
             this.button4.Text = "Đăng Xuất";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btDonHang
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(3, 274);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(230, 53);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button1";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btDonHang.BackColor = System.Drawing.Color.Transparent;
+            this.btDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDonHang.ForeColor = System.Drawing.Color.Black;
+            this.btDonHang.Location = new System.Drawing.Point(3, 274);
+            this.btDonHang.Name = "btDonHang";
+            this.btDonHang.Size = new System.Drawing.Size(230, 53);
+            this.btDonHang.TabIndex = 1;
+            this.btDonHang.Text = "Quản Lý Đơn Hàng";
+            this.btDonHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btDonHang.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btKhachHang
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(3, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 53);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button1";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.btKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.btKhachHang.Location = new System.Drawing.Point(3, 215);
+            this.btKhachHang.Name = "btKhachHang";
+            this.btKhachHang.Size = new System.Drawing.Size(230, 53);
+            this.btKhachHang.TabIndex = 1;
+            this.btKhachHang.Text = "Quản Lý Khách Hàng";
+            this.btKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btKhachHang.UseVisualStyleBackColor = false;
+            this.btKhachHang.Click += new System.EventHandler(this.btKhachHang_Click);
             // 
             // btXe
             // 
@@ -143,6 +146,21 @@
             this.pnForm.Size = new System.Drawing.Size(1040, 654);
             this.pnForm.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(2, 333);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 53);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Báo Cáo Thống Kê";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -166,11 +184,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbNameUser;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btDonHang;
+        private System.Windows.Forms.Button btKhachHang;
         private System.Windows.Forms.Button btXe;
         private System.Windows.Forms.Label lbChucVu;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel pnForm;
+        private System.Windows.Forms.Button button1;
     }
 }

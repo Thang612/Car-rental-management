@@ -25,3 +25,5 @@ C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\GUI_QLTX\obj\Debug\GUI_QL
 C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\GUI_QLTX\obj\Debug\GUI_QLTX.Xe.resources
 C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\GUI_QLTX\obj\Debug\GUI_QLTX.Properties.Resources.resources
 C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\GUI_QLTX\obj\Debug\GUI_QLTX.ThueXe.resources
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\GUI_QLTX\obj\Debug\GUI_QLTX.KhachHang.resources
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\GUI_QLTX\obj\Debug\GUI_QLTX.XeChiTiet.resources

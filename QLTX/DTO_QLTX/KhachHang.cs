@@ -15,6 +15,14 @@ namespace DTO_QLTX
             HopDongs = new HashSet<HopDong>();
         }
 
+        public KhachHang (int maKhachHang, string tenKhachHang, double? soCCCD, int? soDienThoai)
+        {
+            MaKhachHang = maKhachHang;
+            TenKhachHang = tenKhachHang;
+            this.soCCCD = soCCCD;
+            SoDienThoai = soDienThoai;
+        }
+
         [Key]
         public int MaKhachHang { get; set; }
 

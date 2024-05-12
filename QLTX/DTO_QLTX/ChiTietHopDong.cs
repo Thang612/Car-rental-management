@@ -11,11 +11,6 @@ namespace DTO_QLTX
     {
         [Key]
         public int Ma { get; set; }
-
-        public int? SoLuong { get; set; }
-
-        public double? GiamGia { get; set; }
-
         public DateTime? NgayKhoiHanh { get; set; }
 
         public DateTime? NgayKetThuc { get; set; }
@@ -27,5 +22,12 @@ namespace DTO_QLTX
         public virtual HopDong HopDong { get; set; }
 
         public virtual Xe Xe { get; set; }
+
+        public ChiTietHopDong( DateTime? ngayKhoiHanh, DateTime? ngayKetThuc, int? maXe)
+        {
+            NgayKhoiHanh = ngayKhoiHanh;
+            NgayKetThuc = ngayKetThuc;
+            MaXe = maXe;
+        }
     }
 }

@@ -91,12 +91,9 @@ namespace GUI_QLTX
 
         private void btThueXe_Click(object sender, EventArgs e)
         {
-            Control.thueXe(xeID);
             Control.hienThiThueXe();
+            Control.thueXe(new ChiTietHopDong(_timXeForm.ngayLay(), _timXeForm.ngayTra(), xeID));
             Control.tinhTien();
-
-
-
         }
 
         private void XeUI_Load(object sender, EventArgs e)

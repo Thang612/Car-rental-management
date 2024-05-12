@@ -15,9 +15,10 @@ namespace BUS_QLTX
     public class BUS_Xe
     {
         DAL_Xe dalXe = new DAL_Xe();
-        public DataTable layXe()
+
+        public DataTable layXe(DateTime ngayLay, DateTime NgayTra, string thuongHieu, string loaiXe)
         {
-            return dalXe.layXe();
+            return dalXe.layXe(ngayLay, NgayTra, thuongHieu, loaiXe);
         }
 
         public void themXe(string bienSo, string moTa, string tinhTrang, int giaThue, string tenThuongHieu, string tenLoaiXe, bool mayLanh, bool camBienLui, bool ac, byte[] hinhAnh)

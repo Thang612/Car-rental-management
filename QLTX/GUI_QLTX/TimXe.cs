@@ -24,6 +24,16 @@ namespace GUI_QLTX
             InitializeComponent();
         }
 
+        public DateTime ngayLay()
+        {
+            return this.dtNgayBatDau.Value;
+        }
+
+        public DateTime ngayTra()
+        {
+            return this.dtNgayKetThuc.Value;
+        }
+
         private void TimXe_Load(object sender, EventArgs e)
         {
             DataTable listLoaiXe = busLoaiXe.layLoaiXe();
@@ -62,7 +72,7 @@ namespace GUI_QLTX
 
             if (cbLoaiXe.SelectedIndex == 0 && cbThuongHieu.SelectedIndex == 0)
             {
-                DataTable listXe = busXe.layXe();
+                DataTable listXe = busXe.layXe( dtNgayBatDau.Value, dtNgayKetThuc.Value, "", "");
                 if (listXe != null && listXe.Rows.Count > 0)
                 {
                     foreach (DataRow xe in listXe.Rows)
@@ -84,9 +94,70 @@ namespace GUI_QLTX
             xeForm.Show(); 
         }
 
-        private void cbLoaiXe_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void dtNgayBatDau_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime ngayHienTai = DateTime.Today;
+
+            // Kiểm tra nếu ngày kết thúc nhỏ hơn ngày bắt đầu thì không thực hiện truy vấn
+            if (dtNgayKetThuc.Value < dtNgayBatDau.Value)
+            {
+                // Hiển thị thông báo hoặc xử lý ngày kết thúc không hợp lệ ở đây
+                MessageBox.Show("Ngày kết thúc không được nhỏ hơn ngày bắt đầu");
+                return;
+            }
+
+            // Kiểm tra nếu ngày kết thúc nhỏ hơn ngày hiện tại thì không thực hiện truy vấn
+            if (dtNgayKetThuc.Value < ngayHienTai)
+            {
+                // Hiển thị thông báo hoặc xử lý ngày kết thúc không hợp lệ ở đây
+                MessageBox.Show("Ngày kết thúc không được nhỏ hơn ngày hiện tại");
+                return;
+            }
+        }
+
+        private void dtNgayKetThuc_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime ngayHienTai = DateTime.Today;
+
+            // Kiểm tra nếu ngày kết thúc nhỏ hơn ngày bắt đầu thì không thực hiện truy vấn
+            if (dtNgayKetThuc.Value < dtNgayBatDau.Value)
+            {
+                // Hiển thị thông báo hoặc xử lý ngày kết thúc không hợp lệ ở đây
+                MessageBox.Show("Ngày kết thúc không được nhỏ hơn ngày bắt đầu");
+                return;
+            }
+
+            // Kiểm tra nếu ngày kết thúc nhỏ hơn ngày hiện tại thì không thực hiện truy vấn
+            if (dtNgayKetThuc.Value < ngayHienTai)
+            {
+                // Hiển thị thông báo hoặc xử lý ngày kết thúc không hợp lệ ở đây
+                MessageBox.Show("Ngày kết thúc không được nhỏ hơn ngày hiện tại");
+                return;
+            }
+
+            
+        }
+
+        private void btTimXe_Click(object sender, EventArgs e)
+        {
+            // Thực hiện truy vấn chỉ khi điều kiện hợp lệ
+            string tenLoaiXe = "", tenThuongHieu = "";
+            fpDanhSachXe.Controls.Clear();
+            if (cbLoaiXe.SelectedItem != "Tất cả")
+                tenLoaiXe = cbLoaiXe.SelectedItem.ToString();
+            if (cbThuongHieu.SelectedItem != "Tất cả")
+                tenThuongHieu = cbThuongHieu.SelectedItem.ToString();
+            DataTable listXe = busXe.layXe(dtNgayBatDau.Value, dtNgayKetThuc.Value, tenLoaiXe, tenThuongHieu);
+            if (listXe != null && listXe.Rows.Count > 0)
+            {
+                foreach (DataRow xe in listXe.Rows)
+                {
+                    XeUI xeForm = new XeUI(xe);
+                    xeForm.setTimXeForm(this);
+                    fpDanhSachXe.Controls.Add(xeForm);
+                }
+            }
         }
     }
 }

@@ -17,7 +17,8 @@ namespace DTO_QLTX
         public int? LoaiHoaDon { get; set; }
 
         public int? MaHopDong { get; set; }
-
+        public double? PhatSinh { get; set; }
+        public double? ThanhTien { get; set; }
         public virtual HopDong HopDong { get; set; }
     }
 }

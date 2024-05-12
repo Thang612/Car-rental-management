@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL_HopDong.cs" />
+    <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_LoaiXe.cs" />
     <Compile Include="DAL_NguoiDung.cs" />
     <Compile Include="DAL_ThuongHieu.cs" />
