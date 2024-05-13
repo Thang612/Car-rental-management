@@ -9,6 +9,6 @@ namespace DAL_QLTX
 {
     public class DBConnect
     {
-        protected SqlConnection _conn = new SqlConnection("data source=DESKTOP-1SUTU64;initial catalog=QLTX;Integrated Security = True");
+        protected SqlConnection _conn = new SqlConnection("data source=LAPTOP-54GSHIV5\\SQLEXPRESS;initial catalog=QLTX;Integrated Security = True");
     }
 }

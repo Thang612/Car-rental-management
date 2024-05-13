@@ -88,5 +88,28 @@ namespace GUI_QLTX
             // Hiển thị form con
             khForm.Show();
         }
+
+        private void btnQuanLyND_Click(object sender, EventArgs e)
+        {
+            QuanLyNguoiDung NvForm = new QuanLyNguoiDung();
+            // Đặt form con thành không phải là form cấp cao nhất trong ứng dụng
+            NvForm.TopLevel = false;
+
+            // Đặt DockStyle của form con thành Fill để lấp đầy Panel
+            NvForm.Dock = DockStyle.Fill;
+            NvForm.FormBorderStyle = FormBorderStyle.None;
+
+            // Thêm form con vào Panel
+            pnForm.Controls.Clear(); // Xóa các control hiện có trong Panel trước khi thêm form mới
+            pnForm.Controls.Add(NvForm);
+            // Xác định vị trí của form trong pnForm
+            int x = (pnForm.Width - NvForm.Width) / 2;
+            int y = (pnForm.Height - NvForm.Height) / 2;
+
+            // Đặt vị trí của form trong pnForm
+            NvForm.Location = new Point(x, y);
+            // Hiển thị form con
+            NvForm.Show();
+        }
     }
 }

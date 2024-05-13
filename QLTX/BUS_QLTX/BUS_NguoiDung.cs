@@ -16,7 +16,25 @@ namespace BUS_QLTX
         {
             return dalNguoiDung.layNguoiDung(username, password);   
         }
+        public List<NguoiDung> LayDanhSachNguoiDung()
+        {
+            return dalNguoiDung.LayDanhSachNguoiDung();
+        }
+        public void ThemNguoiDung(NguoiDung nguoiDung)
+        {
+            dalNguoiDung.ThemNguoiDung(nguoiDung);
+        }
+        public void SuaNguoiDung(NguoiDung nguoiDung)
+        {
+            dalNguoiDung.SuaNguoiDung(nguoiDung);
+        }
+
+        public bool XoaNguoiDung(int maNguoiDung)
+        {
+            return dalNguoiDung.XoaNguoiDung(maNguoiDung); // Gọi phương thức từ lớp DAL để xóa người dùng
+        }
 
 
     }
+
 }
