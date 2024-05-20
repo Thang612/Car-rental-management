@@ -1,0 +1,46 @@
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.exe.config
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.exe
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.pdb
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.exe
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\EntityFramework.dll
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.pdb
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.exe.config
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\EntityFramework.xml
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.AssemblyReference.cache
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.Properties.Resources.resources
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.GenerateResource.cache
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.CoreCompileInputs.cache
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.CopyComplete
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.exe
+C:\Users\Thang Dang\Desktop\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.pdb
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.exe.config
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.exe
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.pdb
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.exe
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\EntityFramework.dll
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.pdb
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.exe.config
+G:\Car-rental-management\QLTX\DAL_QLTX\bin\Debug\EntityFramework.xml
+G:\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.AssemblyReference.cache
+G:\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.Properties.Resources.resources
+G:\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.GenerateResource.cache
+G:\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.CoreCompileInputs.cache
+G:\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.CopyComplete
+G:\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.exe
+G:\Car-rental-management\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.pdb
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.exe.config
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.exe
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\DAL_QLTX.pdb
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.exe
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\EntityFramework.dll
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.pdb
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\DTO_QLTX.exe.config
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\EntityFramework.xml
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.AssemblyReference.cache
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.Properties.Resources.resources
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.GenerateResource.cache
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.CoreCompileInputs.cache
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.csproj.CopyComplete
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.exe
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\obj\Debug\DAL_QLTX.pdb
+D:\OU_HK2_2023-2024\LTCSDL\Car-rental-management-main\QLTX\DAL_QLTX\bin\Debug\DAL_ThongKeBC.cs
