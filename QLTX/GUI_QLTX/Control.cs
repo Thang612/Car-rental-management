@@ -13,6 +13,7 @@ namespace GUI_QLTX
 {
     public partial class Control : Form
     {
+        private NguoiDung nd;
         static ThueXe thuexeForm = new ThueXe();
         public static void thueXe(ChiTietHopDong chiTiet)
         {
@@ -38,9 +39,17 @@ namespace GUI_QLTX
             InitializeComponent();
         }
 
-        private void Control_Load(object sender, EventArgs e)
+        public Control(NguoiDung nd)
         {
 
+            InitializeComponent();
+            this.nd = nd;
+        }
+
+        private void Control_Load(object sender, EventArgs e)
+        {
+            lbNameUser.Text = nd.TenNguoiDung;
+            lbChucVu.Text = nd.LoaiNguoiDung;
         }
 
         private void btXe_Click(object sender, EventArgs e)
@@ -110,6 +119,66 @@ namespace GUI_QLTX
             NvForm.Location = new Point(x, y);
             // Hiển thị form con
             NvForm.Show();
+        }
+
+        private void btDonHang_Click(object sender, EventArgs e)
+        {
+            HopDong khForm = new HopDong();
+            // Đặt form con thành không phải là form cấp cao nhất trong ứng dụng
+            khForm.TopLevel = false;
+
+            // Đặt DockStyle của form con thành Fill để lấp đầy Panel
+            khForm.Dock = DockStyle.Fill;
+            khForm.FormBorderStyle = FormBorderStyle.None;
+
+            // Thêm form con vào Panel
+            pnForm.Controls.Clear(); // Xóa các control hiện có trong Panel trước khi thêm form mới
+            pnForm.Controls.Add(khForm);
+            // Xác định vị trí của form trong pnForm
+            int x = (pnForm.Width - khForm.Width) / 2;
+            int y = (pnForm.Height - khForm.Height) / 2;
+
+            // Đặt vị trí của form trong pnForm
+            khForm.Location = new Point(x, y);
+            // Hiển thị form con
+            khForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ThongKes khForm = new ThongKes();
+            // Đặt form con thành không phải là form cấp cao nhất trong ứng dụng
+            khForm.TopLevel = false;
+
+            // Đặt DockStyle của form con thành Fill để lấp đầy Panel
+            khForm.Dock = DockStyle.Fill;
+            khForm.FormBorderStyle = FormBorderStyle.None;
+
+            // Thêm form con vào Panel
+            pnForm.Controls.Clear(); // Xóa các control hiện có trong Panel trước khi thêm form mới
+            pnForm.Controls.Add(khForm);
+            // Xác định vị trí của form trong pnForm
+            int x = (pnForm.Width - khForm.Width) / 2;
+            int y = (pnForm.Height - khForm.Height) / 2;
+
+            // Đặt vị trí của form trong pnForm
+            khForm.Location = new Point(x, y);
+            // Hiển thị form con
+            khForm.Show();
+        }
+
+        private void btDangXuat_Click(object sender, EventArgs e)
+        {
+            this.nd = null;
+            Login lg = new Login();
+
+            lg.Show();
+            this.Close();
+        }
+
+        private void Control_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

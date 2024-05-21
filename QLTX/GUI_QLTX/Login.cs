@@ -48,7 +48,7 @@ namespace GUI_QLTX
                     // Kiểm tra xem người dùng có nhấn nút "OK" không
                     if (dialogResult == DialogResult.OK)
                     {
-                        Control control = new Control();
+                        Control control = new Control(nd);
                         control.Show();
                         control.Focus();
                         control.StartPosition= FormStartPosition.CenterScreen;

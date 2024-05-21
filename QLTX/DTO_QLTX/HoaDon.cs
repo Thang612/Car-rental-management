@@ -11,14 +11,12 @@ namespace DTO_QLTX
     {
         [Key]
         public int MaHoaDon { get; set; }
-
         public double? TongTien { get; set; }
-
-        public int? LoaiHoaDon { get; set; }
-
         public int? MaHopDong { get; set; }
         public double? PhatSinh { get; set; }
-        public double? ThanhTien { get; set; }
+        public DateTime NgayLaphopDong { get; set; }
+
         public virtual HopDong HopDong { get; set; }
     }
 }
+    

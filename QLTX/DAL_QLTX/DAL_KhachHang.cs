@@ -30,6 +30,33 @@ namespace DAL_QLTX
             return dtKhachHang;
         }
 
+        public KhachHang layKhachHang(int? maKhachHang)
+        {
+            string query = string.Format("SELECT * FROM KhachHang WHERE MaKhachHang = {0}", maKhachHang);
+            SqlDataAdapter da = new SqlDataAdapter(query, _conn);
+            DataTable dtKhachHang = new DataTable();
+            da.Fill(dtKhachHang);
+
+            if (dtKhachHang.Rows.Count > 0)
+            {
+                DataRow row = dtKhachHang.Rows[0];
+
+                KhachHang khachHang = new KhachHang
+                (
+                    (int)row.Field<int?>("MaKhachHang"),
+                    row.Field<string>("TenKhachHang"),
+                    row.Field<double?>("SoCCCD"),
+                    row.Field<int?>("SoDienThoai")
+                );
+                return khachHang;
+            }
+            else
+            {
+                return null; // Customer not found
+            }
+        }
+
+
         public void themKhachHang(string tenKH, int soDT, int cccd)
         {
             // Kết nối đến cơ sở dữ liệu

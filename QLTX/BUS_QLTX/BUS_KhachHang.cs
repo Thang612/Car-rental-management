@@ -1,4 +1,5 @@
 ﻿using DAL_QLTX;
+using DTO_QLTX;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,6 +16,11 @@ namespace BUS_QLTX
         public DataTable layKhachHang()
         {
             return dalKhachHang.layKhachHang();
+        }
+
+        public KhachHang layKhachHang (int maKhachHang)
+        {
+            return dalKhachHang.layKhachHang(maKhachHang);
         }
 
         public DataTable layKhachHang(string tenKH, string soDT, string cccd) {

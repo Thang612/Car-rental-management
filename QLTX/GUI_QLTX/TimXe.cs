@@ -108,7 +108,7 @@ namespace GUI_QLTX
             }
 
             // Kiểm tra nếu ngày kết thúc nhỏ hơn ngày hiện tại thì không thực hiện truy vấn
-            if (dtNgayKetThuc.Value < ngayHienTai)
+            if (dtNgayBatDau.Value < ngayHienTai)
             {
                 // Hiển thị thông báo hoặc xử lý ngày kết thúc không hợp lệ ở đây
                 MessageBox.Show("Ngày kết thúc không được nhỏ hơn ngày hiện tại");

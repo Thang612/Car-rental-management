@@ -26,10 +26,11 @@ namespace DAL_QLTX
                 {
                     nguoiDung = new NguoiDung
                     {
-                        MaNguoiDung = (int)reader[0],
+                        MaNguoiDung = (int)reader[0], 
                         TenNguoiDung = (string)reader[1],
                         TaiKhoan = (string)reader[2],
-                        MatKhau = (string)reader[3]
+                        MatKhau = (string)reader[3],
+                        LoaiNguoiDung = (string)reader[4]
                     };
                 }
 

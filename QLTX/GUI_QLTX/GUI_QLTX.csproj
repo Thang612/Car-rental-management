@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,18 @@
     </Compile>
     <Compile Include="Control.Designer.cs">
       <DependentUpon>Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HopDong.Designer.cs">
+      <DependentUpon>HopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
@@ -76,6 +89,12 @@
     </Compile>
     <Compile Include="QuanLyNguoiDung.Designer.cs">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKes.Designer.cs">
+      <DependentUpon>ThongKes.cs</DependentUpon>
     </Compile>
     <Compile Include="ThueXe.cs">
       <SubType>Form</SubType>
@@ -110,6 +129,12 @@
     <EmbeddedResource Include="Control.resx">
       <DependentUpon>Control.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HopDong.resx">
+      <DependentUpon>HopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNguoiDung.resx">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKes.resx">
+      <DependentUpon>ThongKes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThueXe.resx">
       <DependentUpon>ThueXe.cs</DependentUpon>
